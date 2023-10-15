@@ -1,7 +1,83 @@
-.galeria-2 img {
-    @include flex-column;
-    gap: $fuente-media;
-    background-color: $color-terciario;
-    display: inline;
-    width: 600px;
+
+#galeria {
+    display: grid;
+    grid-template-areas: 
+    "foto1 foto1 foto2 foto2 foto2"
+    "foto1 foto1 foto2 foto2 foto2"
+    "foto3 foto3 foto2 foto2 foto2"
+    "foto3 foto3 foto4 foto4 foto4"
+    "foto3 foto3 foto4 foto4 foto4"
+    "foto5 foto5 foto4 foto4 foto4"
+    "foto5 foto5 foto6 foto6 foto6"
+    "foto5 foto5 foto6 foto6 foto6"
+    ;
+    gap: 5px;
+    margin: 30px 0;
+}
+
+.foto1, .foto2, .foto3, .foto4, .foto4, .foto5, .foto6 {
+    max-width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.foto1 {
+    background-image: url(../img/gakeria1.webp);
+    grid-area: foto1;
+}
+
+.foto2 {
+    background-image: url(../img/galeria4.jpg);
+    grid-area: foto2;
+    height: 100%;
+}
+
+.foto3 {
+    background-image: url(../img/galeria3.jpg);
+    grid-area: foto3;
+}
+
+.foto4 {
+    background-image: url(../img/galeria2.webp);
+    grid-area: foto4;
+}
+
+.foto5 {
+    background-image: url(../img/galeria5.jpg);
+    grid-area: foto5;
+    height: 100%;
+}
+
+.foto6 {
+    background-image: url(../img/galeria6.jpg);
+    grid-area: foto6;
+}
+
+@media (max-width: 991px) {
+    #galeria {
+        grid-template-areas: 
+        "foto1 foto2"
+        "foto3 foto4"
+        "foto5 foto6";
+    }
+
+    .foto1, .foto2, .foto3, .foto4, .foto4, .foto5, .foto6 {
+        height: 300px;
+    }
+}
+
+@media (max-width: 767px){
+    #galeria {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .foto1, .foto2, .foto3, .foto4, .foto4, .foto5, .foto6 {
+        height: 200px;
+        width: 250px; 
+    }
 }

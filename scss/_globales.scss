@@ -1,6 +1,6 @@
 header{
     background-color: $color-primario;
-    padding: $espaciado-general / 4px 0;
+    padding: $espaciado-general - 15px ;
 }
 
 body {
@@ -31,7 +31,7 @@ body {
 
 @media (min-width: $tablet) {
     .carousel-item img {
-        height: 70hv;
+        height: 70vh;
     }
 }
 
@@ -43,7 +43,7 @@ body {
 
 @media (min-width: $desktop) {
     .carousel-item img {
-        height: 90hv;
+        height: 90vh;
     }
 }
 
